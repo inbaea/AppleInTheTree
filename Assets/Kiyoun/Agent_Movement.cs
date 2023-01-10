@@ -26,15 +26,18 @@ public class Agent_Movement : MonoBehaviour
         }
     }
     void OnTriggerEnter2D(Collider2D c){
-        if(c.tag=="Obstacles"){
-            target.GetComponent<Random>().Spawn();
-        }
         if(c.tag=="Enemy"){
             canMove=false;
         }
-    }void OnTriggerStay2D(Collider2D c){
         if(c.tag=="Obstacles"){
-            target.GetComponent<Random>().Spawn();
+            int i = UnityEngine.Random.Range(1,3);
+            if(i==1){
+                target.GetComponent<Random>().SpawnLeft();
+            }
+            else{
+                target.GetComponent<Random>().SpawnRight();
+            }
         }
     }
+
 }
