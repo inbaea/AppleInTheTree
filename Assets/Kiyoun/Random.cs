@@ -22,16 +22,35 @@ public class Random : MonoBehaviour
         v2 = player.transform.position;
     }
     public void SpawnLeft(){
-        transform.position = new Vector2(player.transform.position.x-2f,player.transform.position.y);
+        // transform.position = new Vector2(player.transform.position.x-f,player.transform.position.y);
+        transform.position = new Vector2(transform.position.x-1.5f,transform.position.y);
     }
     public void SpawnRight(){
-        transform.position = new Vector2(player.transform.position.x+2f,player.transform.position.y);
+        // transform.position = new Vector2(player.transform.position.x+f,player.transform.position.y);
+        transform.position = new Vector2(transform.position.x+1.5f,transform.position.y);
+    }
+    public void SpawnBack(){
+        //transform.position = new Vector2(player.transform.position.x,player.transform.position.y-f);
+        transform.position = new Vector2(transform.position.x,transform.position.y-1.5f);
     }
     public void Spawn(){
         transform.position = (v1 - v2).normalized * 2f + v2;
     }
     void OnTriggerStay2D(Collider2D other){
-        if(other.tag=="Player")
-            Spawn();            
+        if(other.tag=="Player"){
+            Spawn();
+        }
+        if(other.tag=="Obstacles"){
+            int i = UnityEngine.Random.Range(1,4);
+            if(i==1){
+                SpawnLeft();
+            }
+            else if(i==2){
+                SpawnRight();
+            }
+            else{
+                SpawnBack();
+            }
+        }            
     }
 }

@@ -30,12 +30,15 @@ public class Agent_Movement : MonoBehaviour
             canMove=false;
         }
         if(c.tag=="Obstacles"){
-            int i = UnityEngine.Random.Range(1,3);
+            int i = UnityEngine.Random.Range(1,4);
             if(i==1){
                 target.GetComponent<Random>().SpawnLeft();
             }
-            else{
+            else if(i==2){
                 target.GetComponent<Random>().SpawnRight();
+            }
+            else{
+                target.GetComponent<Random>().SpawnBack();
             }
         }
     }

@@ -446,11 +446,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8864981194574935822, guid: 7407860ceb7cd564d8fec31c8e7f685c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.59
+      value: -1.71
       objectReference: {fileID: 0}
     - target: {fileID: 8864981194574935822, guid: 7407860ceb7cd564d8fec31c8e7f685c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.59
+      value: 0.17
       objectReference: {fileID: 0}
     - target: {fileID: 8864981194574935822, guid: 7407860ceb7cd564d8fec31c8e7f685c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -555,8 +555,9 @@ GameObject:
   - component: {fileID: 1112541061}
   - component: {fileID: 1112541060}
   - component: {fileID: 1112541063}
+  - component: {fileID: 1112541064}
   m_Layer: 0
-  m_Name: Hexagon Pointed-Top
+  m_Name: Guide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -659,6 +660,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!50 &1112541064
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112541059}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &1140340602
 PrefabInstance:
   m_ObjectHideFlags: 0
